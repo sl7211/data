@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iMh-XW-FCM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gratitude Journal-->
+        <scene sceneID="9F6-6C-wBp">
+            <objects>
+                <tableViewController id="5UT-OW-wxk" customClass="TableViewController" customModule="MobileLabUserDefaultsKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="573" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PSl-I3-nav">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="573" id="WMi-H2-Bgy" customClass="TableViewCell" customModule="MobileLabUserDefaultsKit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="573"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WMi-H2-Bgy" id="jBe-uh-y4Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="572.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP7-sB-33q">
+                                            <rect key="frame" x="16" y="25" width="42.5" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="d9A-2d-bke"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <color key="textColor" red="1" green="0.69716429140000002" blue="0.7669667563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Thoughts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMW-R6-121">
+                                            <rect key="frame" x="16" y="54" width="227" height="96"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" staticText="YES" summaryElement="YES" adjustable="YES"/>
+                                            </accessibility>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="V3y-Lj-dzr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="1" green="0.69716429140000002" blue="0.7669667563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="0.89191841650000003" blue="0.88184769119999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="tintColor" red="1" green="0.88148996459999995" blue="0.8603423805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstItem="jMW-R6-121" firstAttribute="top" secondItem="oP7-sB-33q" secondAttribute="bottom" constant="8" id="DiC-vs-cqD"/>
+                                        <constraint firstItem="oP7-sB-33q" firstAttribute="leading" secondItem="jBe-uh-y4Q" secondAttribute="leading" constant="16" id="h8V-5G-0Ya"/>
+                                        <constraint firstItem="oP7-sB-33q" firstAttribute="top" secondItem="jBe-uh-y4Q" secondAttribute="topMargin" constant="14" id="m19-53-QAW"/>
+                                        <constraint firstItem="jMW-R6-121" firstAttribute="leading" secondItem="jBe-uh-y4Q" secondAttribute="leading" constant="16" id="uHw-4e-Zri"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="oP7-sB-33q" id="nTF-N4-sn6"/>
+                                    <outlet property="messageLabel" destination="jMW-R6-121" id="ofX-lM-6Fi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5UT-OW-wxk" id="KMT-zB-M62"/>
+                            <outlet property="delegate" destination="5UT-OW-wxk" id="18s-1X-nRm"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="EWA-vh-5a7"/>
+                        <barButtonItem style="done" systemItem="edit" id="FpT-Xz-wme">
+                            <color key="tintColor" red="1" green="0.69716429140000002" blue="0.7669667563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Epn-ge-n3f"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Gratitude Journal" id="Tgo-bP-ygR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="L30-aB-gVH">
+                            <color key="tintColor" red="1" green="0.69716429140000002" blue="0.7669667563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="handleAddButton:" destination="5UT-OW-wxk" id="k9z-en-mLK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5h-HT-iYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2612" y="259.52023988005999"/>
+        </scene>
+        <!--Action View Controller-->
+        <scene sceneID="Eph-hT-qmy">
+            <objects>
+                <viewController storyboardIdentifier="ActionViewController" id="5L8-BJ-4NC" customClass="ActionViewController" customModule="MobileLabUserDefaultsKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LnS-xi-9fC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="I have gratitude for" placeholder="Share thoughts" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDi-WL-Lfh">
+                                <rect key="frame" x="16" y="137" width="343" height="36"/>
+                                <color key="textColor" red="1" green="0.69716429140000002" blue="0.7669667563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID1-wO-Qgf">
+                                <rect key="frame" x="140" y="313" width="94" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="1" green="0.69716429140000002" blue="0.7669667563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleSaveButton:" destination="5L8-BJ-4NC" eventType="touchUpInside" id="GJ2-Nv-aWG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.89191841650000003" blue="0.88184769119999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="1" green="0.69716429140000002" blue="0.7669667563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="NS4-bu-Pct" firstAttribute="trailing" secondItem="MDi-WL-Lfh" secondAttribute="trailing" constant="16" id="1CS-lz-VRA"/>
+                            <constraint firstItem="MDi-WL-Lfh" firstAttribute="leading" secondItem="NS4-bu-Pct" secondAttribute="leading" constant="16" id="7DJ-fQ-ywi"/>
+                            <constraint firstItem="MDi-WL-Lfh" firstAttribute="top" secondItem="NS4-bu-Pct" secondAttribute="top" constant="117" id="Msn-k1-Cuf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NS4-bu-Pct"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="MDi-WL-Lfh" id="kRH-na-uuZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASO-x3-605" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013.5999999999999" y="1077.2113943028487"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nG9-SF-mUN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iMh-XW-FCM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0e8-mW-0Rs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5UT-OW-wxk" kind="relationship" relationship="rootViewController" id="UYh-Qa-mI5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AS-kv-0ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.8" y="259.52023988005999"/>
+        </scene>
+    </scenes>
+</document>
